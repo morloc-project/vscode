@@ -1,7 +1,7 @@
-# morloc VS Code extension
+# `morloc` VS Code extension
 
 This extension provides syntax highlighting and snippet support for the
-`[morloc](https://github.com/morloc-project/morloc)` programming language.
+[morloc](https://github.com/morloc-project/morloc) programming language.
 
 ## Preview
 
