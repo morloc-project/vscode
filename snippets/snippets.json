@@ -1,0 +1,68 @@
+{
+    "snippet.module": {
+		"body": ["module ${1:name} (${2:term})"],
+		"description": "Expand a module",
+		"prefix": ["mod", "module"],
+		"scope": "morloc"
+    },
+
+    "snippet.type.lang": {
+		"body": ["type ${1:lang} => ${2:type} = \"${3:native-type}\""],
+		"description": "Expand a language-specific type binding",
+		"prefix": ["tl", "typel"],
+		"scope": "morloc"
+    },
+
+    "snippet.type.lang.1": {
+		"body": ["type ${1:lang} => ${2:type} a = \"${3:native-type}\" a"],
+		"description": "Expand a language-specific type binding with one parameter",
+		"prefix": ["tl1", "typel1"],
+		"scope": "morloc"
+    },
+
+    "snippet.type.lang.2": {
+		"body": ["type ${1:lang} => ${2:type} a b = \"${3:native-type}\" a b"],
+		"description": "Expand a language-specific type binding with two parameters",
+		"prefix": ["tl2", "typel2"],
+		"scope": "morloc"
+    },
+
+    "snippet.class": {
+		"body": ["class ${1:Class} where\n  ${2:term} :: ${3:type}"],
+		"description": "Define a new typeclass",
+		"prefix": ["cl", "typeclass"],
+		"scope": "morloc"
+    },
+
+    "snippet.instance": {
+		"body": ["instance ${1:Class} ${2:Type} where\n  ${3:imports}"],
+		"description": "Define a new instance for a class",
+		"prefix": ["inst"],
+		"scope": "morloc"
+    },
+
+	"snippet.source": {
+		"body": ["source ${1:lang} from \"${2:file}\" (\"${3:function}\" as ${4:alias})"],
+		"description": "Source native code",
+		"prefix": ["src", "source"],
+		"scope": "morloc"
+	},
+	"snippet.source.cpp": {
+		"body": ["source Cpp from \"${2:file}\" (\"${3:function}\" as ${4:alias})"],
+		"description": "Source a C++ function",
+		"prefix": ["srcc", "source"],
+		"scope": "morloc"
+	},
+	"snippet.source.python3": {
+		"body": ["source Python3 from \"${2:file}\" (\"${3:function}\" as ${4:alias})"],
+		"description": "Source a Python function",
+		"prefix": ["srcpy", "source"],
+		"scope": "morloc"
+	},
+	"snippet.source.r": {
+		"body": ["source R from \"${2:file}\" (\"${3:function}\" as ${4:alias})"],
+		"description": "Source an R function",
+		"prefix": ["srcr", "source"],
+		"scope": "morloc"
+	}
+}
