@@ -1,0 +1,116 @@
+{
+  "name": "morloc",
+  "scopeName": "source.morloc",
+  "fileTypes": ["loc"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#primitives" },
+    { "include": "#operators" },
+    { "include": "#varlabels" },
+    { "include": "#errors" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.morloc",
+          "match": "\\b(where|module|from|as|source|export|table|import|type|instance|class|object|record)\\b"
+        }
+      ]
+    },
+    "primitives": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.morloc",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "constant.boolean.morloc",
+          "match": "\\b(True|False)\\b"
+        },
+        {
+          "name": "string.quoted.other.execute.morloc",
+          "begin": "`",
+          "end": "`"
+        },
+        {
+          "name": "string.quoted.other.execute-bracket.morloc",
+          "begin": "\\[[a-zA-Z0-9]*\\|",
+          "end": "\\|\\]"
+        },
+        {
+          "name": "constant.numeric.float.morloc",
+          "match": "(?<![a-zA-Z_])\\b[0-9]+\\.[0-9]+\\b(?![a-zA-Z_])"
+        },
+        {
+          "name": "constant.numeric.integer.morloc",
+          "match": "(?<![a-zA-Z_])\\b[0-9]+\\b(?![a-zA-Z_])"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.morloc",
+          "match": "(::|->|=>|>=|<=|//|==|/=|/=|:|,|\\(|\\)|\\[|\\]|\\{|\\}|>|<|\\+|-|/|%|\\^|;|@)"
+        }
+      ]
+    },
+    "varlabels": {
+      "patterns": [
+        {
+          "name": "variable.other.label.morloc",
+          "match": "\\b\\w+:"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-dash.morloc",
+          "begin": "--",
+          "end": "$",
+          "patterns": [
+            { "include": "#todo" },
+            { "include": "#tags" }
+          ]
+        },
+        {
+          "name": "comment.block.morloc",
+          "begin": "\\{-",
+          "end": "-\\}",
+          "patterns": [
+            { "include": "#todo" },
+            { "include": "#tags" }
+          ]
+        }
+      ]
+    },
+    "todo": {
+      "patterns": [
+        {
+          "name": "keyword.other.todo.morloc",
+          "match": "\\b(TODO|NOTE|FIXME|XXX):"
+        }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "name": "storage.type.annotation.morloc",
+          "match": "\\b(Author|Email|Github|Bugs|Website|Maintainer|Description):"
+        }
+      ]
+    },
+    "errors": {
+      "patterns": [
+        {
+          "name": "invalid.illegal.morloc",
+          "match": "^#.*$"
+        }
+      ]
+    }
+  }
+}

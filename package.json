@@ -1,0 +1,32 @@
+{
+  "name": "morloc",
+  "displayName": "morloc",
+  "description": "VS Code support for morloc",
+  "publisher": "morloclang",
+  "icon": "icons/morloc-icon.png",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "morloc",
+    "morloc language"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "morloc",
+      "aliases": ["morloc"],
+      "extensions": [".loc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "morloc",
+      "scopeName": "source.morloc",
+      "path": "./syntaxes/morloc.tmLanguage.json"
+    }]
+  }
+}
