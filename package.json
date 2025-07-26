@@ -9,6 +9,10 @@
   "engines": {
     "vscode": "^1.101.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morloc-project/vscode.git"
+  },
   "categories": [
     "Snippets",
     "Programming Languages"
