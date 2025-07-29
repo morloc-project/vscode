@@ -7,18 +7,6 @@ This extension provides syntax highlighting and snippet support for the
 
 ![demo screenshot](./images/demo.png)
 
-## TODO
-
- - [x] syntax highlighting
- - [x] snippets
- - [ ] commands
-   - [ ] typecheck module
-   - [ ] format current file
-   - [ ] lint module
-   - [ ] compile module
-   - [ ] debug
-   - [ ] parse `morloc` binaries
-
 ## License
 
 [MIT](./LICENSE)
